@@ -1,0 +1,22 @@
+ALGORITHM First_Task
+VAR
+    Nw,Nv,i:INTEGER
+    str:STRING
+    ch:CHAR
+BEGIN
+    str:=""
+    Nw:=1
+    Nv:=0
+    REPEAT
+        Read(ch)
+        str:=str+ch
+        IF (ch=" ") THEN
+            Nw:=Nw+1
+        END_IF
+        IF (ch.toUpperCase() in ['A','E','I','O','U','Y']) THEN
+            Nv:=Nv+1
+        END_IF    
+    UNTIL (ch='.')
+    Write("Number of words: ", Nw)
+    Write("Number of vowels: ", Nv)
+END
